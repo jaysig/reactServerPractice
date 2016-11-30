@@ -5,6 +5,10 @@ const bodyParser = require('body-parser'); //parses requests into json
 const morgan = require('morgan'); //logging framework
 const app = express();
 const router = require('./router');
+const mongoose = require('mongoose');
+
+//DB Setup
+mongoose.connect('mongodb://localhost:auth/auth');
 
 // App Setup
 app.use(morgan('combined'));
